@@ -7,12 +7,12 @@
 #body {
     /* do a little research about this max-width/width */
     min-width: 1440px;
-    min-height: 1617px;
+    height: 1617px;
     font-family: 'poppins', 'sans-serif';
 }
 .header {
     min-width: 1440px;
-    min-height: 100px;
+    height: 100px;
     /* position: sticky;
     top: 0; */
 }
@@ -133,15 +133,15 @@
 #introductory-text-container {
     width: 181px;
     height: 154px;
-    position: absolute;
-    top: 206px;
+    position: relative;
+    top: 87px;
     left: 209px;
     font-family: 'Montserrat', 'sans-serif';
     font-weight: 500;
 }
 #brand-initials {
     font-weight: 600;
-    font-family: 'Newsreader', serif;
+    font-family: 'Newsreader', 'serif';
     font-size: 42px;
     line-height: 42px;
 }
@@ -227,7 +227,7 @@ footer {
     display: flex;
     justify-content: flex-start;
     margin-top: 79px;
-    width: 1440px;
+    min-width: 1440px;
     height: 280px;
     /* color: #fff; */
     background-color: #3176AF;
