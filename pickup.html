@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pick up</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="pickup.css">
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <main id="body">
+        <header class="header">
+            <nav id="nav-bar">
+                <!-- what we hve as logo right now is me improvising by using the class "logo-container" below as logo for both the nav and footer -->
+                <!-- if i need to use the main image here in html i just need to change the logo-container class to an id, uncomment the img in div below,then comment the .logo-container class style in css -->
+                <div class="logo-container">
+                    <!-- <img src="/images/logo-image.JPG" id="logo"></img:src> -->
+                </div>
+                <div id="nav-links-container">
+                    <ul>
+                        <li class="nav-links"><a href="#">HOME</a></li>
+                        <li class="about-us nav-links"><a href="#">ABOUT US</a></li>
+                        <li class="nav-links"><a href="#">SERVICES <i class="fa-solid fa-sort-down" id="chevron"></i></a>
+                            <div id="services-sub-menu">
+                                <ul>
+                                    <li class="sub-nav"><a href="#">Deliver Your Parcels</a></li>
+                                    <li class="sub-nav"><a href="#">Receive Your Parcels</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        
+                        <li class="nav-links" id="sign-up"><a href="#">SIGN UP HERE</a></li>
+                    </ul>
+                    
+                    <a href="#" id="get-in-touch">GET IN TOUCH</a>
+                </div>
+            </nav>
+            <hr id="nav-bottom-lining">
+        </header>
+        <div class="display-container">
+
+            <div id="map">
+                
+            </div>
+            <button id="direct">Click</button>
+            <i class="fa-solid fa-location-crosshairs locate"></i>
+        </div>
+
+        <div id="direction-for-use">
+            <h3 id="request-header">Request a pick-up</h3>
+            <p>* To start, click the location icon at the bottom right corner of the map to get your approximate location.</p>
+            <p><span>p.s you can adjust the blue location markerfor better accuracy.</span></p>
+            <p>* now click the button at the top right corner to view parcel travel details from your location to M & C.</p>
+            <p>*click button to accept!</p>
+            <p id="rate"><span>Rate 250Naira/KM</span></p>
+        </div>
+
+        <div id="pickup-table">
+            <table>
+                <tr>
+                    <th>s/n</th>
+                    <th>item Description</th>
+                    <th>pickup Location</th>
+                    <th>Weight</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Some Clothes and Shoes</td>
+                    <td>Utako, Abuja NG</td>
+                    <td>36kg</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="summary-container">
+
+            <div id="distance-summary">
+                <div id="total-distance-text"></div>
+                <div id="total-distance-value"></div>              
+            </div>
+            <div id="cost-summary">
+                <div id="total-cost-text"></div>
+                <div id="total-cost-value"></div>             
+            </div>
+        </div>
+
+
+        <footer>
+            <div class="logo-container">
+                
+            </div>
+            <div id="footer-links-container">
+                <div id="footer-links">
+                    <div id="quick-links-container">
+                        <ul>
+                            <li class="quick-links">QUICKLINKS</li>
+                            <li class="quick-links"><a href="#">Homepage</a></li>
+                            <li class="quick-links"><a href="#">About Us</a></li>
+                            <li class="quick-links"><a href="#">FAQ</a></li>
+                        </ul>
+                    </div>
+                    <div id="contact-us-container">
+                        <ul>
+                            <li class="quick-links">CONTACT US</li>
+                            <li class="contact-us quick-links"><a href="#">+234(0) 000 00 000</a></li>
+                            <li class="contact-us quick-links"><a href="#">info@divineservices.ng</a></li>
+                            <li class="contact-us quick-links">
+                                <a href="#"><i class="fa-brands fa-instagram quick-links"></i></a>
+                                <a href="#"><i class="fa-brands fa-facebook-f quick-links"></i></a>
+                                <a href="#"><i class="fa-brands fa-twitter quick-links"></i></a>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                </div>
+                <hr>
+                
+                <div id="copyright">
+                    <p id="copyright-text">&copy 2023 M & C Divine Universal Services &#10072;&#10072; All Rights Reserverd </p>
+                </div>
+            </div>
+        </footer>
+    </main>
+    <script src="pickup.js"></script>
+</body>
+</html>

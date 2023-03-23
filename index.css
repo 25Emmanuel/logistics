@@ -5,9 +5,7 @@
     box-sizing: border-box;
 }
 #body {
-    /* do a little research about this max-width/width */
     min-width: 1440px;
-    height: 1617px;
     font-family: 'poppins', 'sans-serif';
 }
 .header {
@@ -150,7 +148,6 @@
 #who-are-we-contents {
     width: 989px;
     height: 774px;
-    /* background: green; */
     margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
