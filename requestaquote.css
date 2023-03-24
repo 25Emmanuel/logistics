@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;1,400&family=Newsreader:ital,opsz@1,6..72&family=Poppins:wght@100;200;300;400&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#body {
+    min-width: 1440px;
+    font-family: 'poppins', 'sans-serif';
+}
+.header {
+    min-width: 1440px;
+    height: 100px;
+    /* position: sticky;
+    top: 0; */
+}
+#nav-bar {
+    display: flex;
+    justify-content: space-between;
+}
+#logo-container {
+    width: 98px;
+    height: 95px;
+    margin-left: 95px;
+}
+.logo-container {
+    width: 100px;
+    height: 100px;
+    background: url('/images/logo-image3.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    margin-left: 200px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+#logo {
+    width: 100%;
+    height: 100%;
+}
+#nav-links-container {
+    width: 686px;
+    height: 75px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 21px;
+    margin-right: 127px;
+    align-self: center;
+}
+#nav-links-container > ul {
+    display: inline-flex;
+    gap: 30px;
+}
+.nav-links {
+    padding: 27px 0px;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a:hover {
+    color: #3176AF;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #1E1E1E;
+}
+
+#nav-links-container .about-us a {
+    color: #3176AF;
+}
+#nav-bottom-lining {
+    margin-left: 27px;
+    background-color: #3176AF;  
+    color: #3176AF; 
+    /* the main blue #3176AF */
+    height: 3px;
+}
+#chevron {
+    position: absolute;
+    padding-left: 4px;
+}
+#sign-up {
+    font-weight: 700;
+}
+#about-us {
+    color: #3176AF;
+}
+#get-in-touch {
+    text-decoration: none;
+    padding: 17px 33px;
+    border-radius: 30px;
+    margin-left: 100px;
+    color: #1E1E1E;
+    border: 1px solid #F62832;
+}
+#get-in-touch:hover {
+    color: #3176AF;
+}
+#services-sub-menu {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 410px;
+    background-color: #6c98bb;
+}
+.sub-nav {
+    list-style: none;
+    padding: 12px;
+}
+#services-sub-menu li:hover {
+    background-color: #b8cada;
+}
+#services-sub-menu li a:hover {
+    color: #fff;
+}
+
+/* introductory part of request page  */
+#introduction-container {
+    width: 1274px;
+    height: 345px;
+    background-image: url('/images/logistics8.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: 30%;
+    margin-top: 19px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#introductory-text-container {
+    width: 181px;
+    height: 154px;
+    position: relative;
+    top: 87px;
+    left: 209px;
+    font-family: 'Montserrat', 'sans-serif';
+    font-weight: 500;
+}
+#brand-initials {
+    font-weight: 600;
+    font-family: 'Newsreader', 'serif';
+    font-size: 42px;
+    line-height: 42px;
+}
+
+/* request a quote declaration section */
+#request-a-quote-container {
+    width: 1274px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 30px;
+}
+#request-a-quote-text-container {
+    width: auto;
+    margin-left: 138px;
+    height: 55px;
+}
+#request-a-quote-text-container:after {
+    content: '';
+    display: block;
+    width: 100px;
+    border-bottom: 3px solid #3176AF;
+}
+#request-a-quote-text {
+    font-size: 20px;
+    font-weight: 500;
+    color: #1e1e1e;
+    margin-bottom: 10px;
+}
+.request-a-quote-headers {
+    text-align: center;
+    font-size: 25px;
+    text-decoration: underline;
+}
+#sender-recipient-details {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 38px;
+    padding: 0 125px;
+}
+#senders-info, #receivers-info {
+    width: 45%;
+}
+#sender-recipient-details label, #sender-recipient-details input {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.sender-receiver-infotext {
+    font-weight: 500;
+    font-size: 18px;
+    /* color: #1e1e1e; */
+    color: #F62832;
+}
+.send-receive-address {
+    width: 100%;
+    resize: none;
+    outline: none;
+    border: none;
+    border: 1px solid #a9a9a9;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    font-family: 'poppins', serif;
+    /* height: 100%; */
+    
+}
+.send-receive-address::placeholder {
+    font-size: 15px;
+}
+.request-quote-form {
+    outline: none;
+    border: none;
+    padding: 10px;
+    border-bottom: 2px solid #a9a9a9;
+    font-family: 'poppins', 'serif';
+}
+.request-quote-form::placeholder {
+    font-size: 12px;
+}
+#declaration-container {
+    margin-top: 30px;
+    padding: 0 125px;
+}
+#declaration-container span {
+    color: red;
+    font-size: 20px;
+}
+#commercial-invoice-text-container, #term-condition-container {
+    margin-top: 30px;
+    padding: 0 125px;
+}
+#commercial-invoice-text-container h4 {
+    text-decoration: underline;
+}
+#commercial-invoice-table {
+    margin-top: 26px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.commercial-invoice-form-fields {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    font-family: 'poppins', 'serif';
+    /* border: none; */
+    font-size: 18px;
+}
+#term-condition-container ul li:nth-child(2) {
+    /* display: inline-block; */
+    margin-right: -160px;
+    /* color: red; */
+}
+#term-condition-container ul input {
+    position: relative;
+}
+#term-condition-container ul li {
+    line-height: 30px;
+    /* list-style: upper-roman; */
+}
+#please-note-container {
+    margin-left: 125px;
+    margin-top: 30px;
+
+}
+#please-note-container h4 {
+    text-decoration: underline;
+}
+#please-note-container h4 span {
+    color: red;
+}
+#note-section {
+    width: max-content;
+    margin-top: 30px;
+    margin-left: 125px;
+    margin-right: auto;
+}
+#note-section ul li {
+    line-height: 30px;
+    /* list-style: upper-roman; */
+}
+.bottom-fields-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 30px;
+}
+#bottom-fields-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.bottom-fields-container label {
+    display: block;
+    text-align: center;
+}
+.bottom-fields-container input {
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #a9a9a9;
+    margin-bottom: 10px;
+    outline: none;
+    font-family: 'poppins', serif;
+    font-size: 18px;
+}
+#bottom-fields-container input {
+    width: 50%;
+    border: none;
+    border-bottom: 2px dotted #a9a9a9;
+    padding: 10px;
+    outline: none;
+    font-family: 'poppins', serif;
+    font-size: 18px;
+}
+#quote-submit-btn {
+    background-color: #3176AF;
+    padding: 11.5px 30px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-family: 'poppins', 'sans-serif';
+    margin-top: 30px;
+    color: #fff;
+}
+#quote-submit-btn:hover {
+    background-color: greenyellow;
+    color: #000;
+}
+#btn-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 100px;
+}
+
+/* footer style is being fetched from the initial index css */

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="requestaquote.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Request A Quote</title>
+</head>
+<body>
+    <main id="body">
+        <header class="header">
+            <nav id="nav-bar">
+                <!-- what we hve as logo right now is me improvising by using the class "logo-container" below as logo for both the nav and footer -->
+                <!-- if i need to use the main image here in html i just need to change the logo-container class to an id, uncomment the img in div below,then comment the .logo-container class style in css -->
+                <div class="logo-container">
+                    <!-- <img src="/images/logo-image.JPG" id="logo"></img:src> -->
+                </div>
+                <div id="nav-links-container">
+                    <ul>
+                        <li class="nav-links"><a href="#">HOME</a></li>
+                        <li class="about-us nav-links"><a href="#">ABOUT US</a></li>
+                        <li class="nav-links"><a href="#">SERVICES <i class="fa-solid fa-sort-down" id="chevron"></i></a>
+                            <div id="services-sub-menu">
+                                <ul>
+                                    <li class="sub-nav"><a href="#">Deliver Your Parcels</a></li>
+                                    <li class="sub-nav"><a href="#">Receive Your Parcels</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        
+                        <li class="nav-links" id="sign-up"><a href="#">SIGN UP HERE</a></li>
+                    </ul>
+                    
+                    <a href="#" id="get-in-touch">GET IN TOUCH</a>
+                </div>
+            </nav>
+            <hr id="nav-bottom-lining">
+        </header>
+
+        <section class="introduction">
+            <div id="introduction-container">
+                <!-- <img id="introductory-image" src="images/logistics44.jpg" alt=""> -->
+                <div id="introductory-text-container">
+                    <p id="introductory-text"><span id="brand-initials"> M & C </span><br> DIVINE <br> UNIVERSAL <br> SERVICES</p>    
+                </div>
+            </div>
+        </section>
+
+        <section id="request-a-quote">
+            <div id="request-a-quote-container">
+                <form action="\">
+                    <div id="content-declaration-container">
+                        <div id="request-a-quote-text-container">
+                            <p id="request-a-quote-text">REQUEST A QUOTE</p>
+                        </div>
+                        <h1 class="request-a-quote-headers">M & C UNIVERSAL SERVICES</h1>
+                        <h3 class="request-a-quote-headers">DECLARATION OF CONTENT & VALUE OF ITEMS</h3>
+                        
+                        <div id="sender-recipient-details">
+                            <div id="senders-info">
+                                <p class="sender-receiver-infotext">sender's information*</p>
+                                <div class="input-containers">
+                                    <label for="senders-name">Full Name</label>
+                                    <input type="text" class="request-quote-form" name="sendersFullname" id="senders-name" placeholder="sender's fullname">
+                                    <div class="error">
+    
+                                    </div>
+                                </div>
+                                <div class="input-containers address">
+                                    <label for="senders-address">Address</label>
+                                    <!-- <input type="text" name="" id="senders-address"> -->
+                                    <textarea name="sendersAddress" id="senders-address" class="send-receive-address" cols="30" rows="10" placeholder="sender's address"></textarea>
+                                    <div class="error">
+                                        
+                                    </div>
+                                </div>
+                                <div class="input-containers">
+                                    <label for="senders-number">Mobile-Number</label>
+                                    <input type="text" name="sendersNumber" class="request-quote-form" id="senders-number" placeholder="sender's number">
+                                    <div class="error">
+                                        
+                                    </div>
+                                </div>
+                                <div class="input-containers">
+                                    <label for="senders-email">Email</label>
+                                    <input type="text" class="request-quote-form"  name="sendersEmail" id="senders-email" placeholder="sender's mail">
+                                    
+                                </div>
+                                
+                            </div>
+    
+                            <div id="receivers-info">
+                                <p class="sender-receiver-infotext">receiver's information*</p>
+                                <div class="input-containers">
+                                    <label for="receivers-name">Full Name</label>
+                                    <input type="text" class="request-quote-form" name="receiversFullname" id="receivers-name" placeholder="receiver's fullname">
+                                    <div class="error">
+                                        
+                                    </div>
+                                </div>
+                                <div class="input-containers address">
+                                    <label for="receivers-address">Address</label>
+                                    <textarea name="receiversAddress" id="receivers-address" class="send-receive-address" cols="30" rows="10" placeholder="receiver's address"></textarea>
+                                    <div class="error">
+                                        
+                                    </div>
+                                </div>
+                                <div class="input-containers">
+                                    <label for="receivers-number">Mobile-Number</label>
+                                    <input type="text" class="request-quote-form" name="receiversNumber" id="receivers-number" placeholder="receiver's mobile number">
+                                    <div class="error">
+                                        
+                                    </div>
+                                </div>
+                                <div>
+                                    <label for="receivers-email">Email</label>
+                                    <input type="text" class="request-quote-form" name="receiversEmail" id="receivers-email" placeholder="receiver's email">
+                                </div>
+                            </div>
+    
+                        </div>
+                        <div id="declaration-container">
+                            <p>
+                                <span>*</span>Please accurately list all items and quantity of each in your package. Also note that the declared value listed below is the amount you will be rufunded if any damage or loss occurs to any items.<br>
+                                <span>*</span>Be sure these values are correct as we will not refund higher than what is listed under any circumstance.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div id="commercial-invoice-text-container">
+                        <h4>COMMERCIAL INVOICE</h4>
+                    </div>
+    
+                    <table id="commercial-invoice-table">
+                        <tr>
+                            <th>Product Description</th>
+                            <th>Quantity</th>
+                            <th>Item's Estimated Value (Naira)</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div>
+                                    <input type="text" name="productDescription" id="" class="commercial-invoice-form-fields">
+
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+
+                                    <input type="text" name="Quantity" id="" class="commercial-invoice-form-fields">
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    <input type="text" name="estimatedValue" id="" class="commercial-invoice-form-fields">
+
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <div id="term-condition-container">
+                        <ul>
+                            <li>
+                                <p>
+                                    I confirm that i am the shipper of the above listed items and i have not concealed or made an<br>
+                                    attempt to conceal any other item in my shipment, and what is listed is an accurate list of all shipping
+                                </p>
+                            </li>
+
+
+                            <li>
+                                <p>
+                                    I fully understand that any attempt to export illegal/prohibited items may result to legal<br>
+                                    consequences including apprehension and payment of fine etc.
+                                </p>
+                            </li>
+                            <div>
+
+                                <input type="checkbox" name="termsConfirmation" id="terms" value="I Understand">
+                            </div>
+                        </ul>
+                    </div>
+
+                    <div id="please-note-container">
+                        <h4>Please Note<span>*</span></h4>
+                    </div>
+
+                    <div id="note-section">
+                        <ul>
+                            <li>
+                                <p>
+                                    M & C Divine will handle all packages and documentations and hand over the shipment to <br>
+                                    UPS on your behalf as shipment depart every business day depending on your <br>
+                                    delivery destination, UPS will inform you of the duty and local charges if any need to be paid,<br>
+                                    and you will have the payment processed directly through the same UPS in the destination country.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Failure to declare value of your item means you give power to the company to declare any<br>
+                                    value for the items on your behalf.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    All shipment fees, once paid and items processed shall be non-refundable and non-creditable<br>
+                                    including in the event that the goods are returned by reasons of any regulation or at the<br>
+                                    discretion of any relevant Authority whatsoever, M & C Divine shall not be responsible for the<br>
+                                    refund of the shipping costs to the customer.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Charges are based on actual or volumetric weight as calculated in the office, not by what is<br>
+                                    displayed on the UPS site or written on the waybill. 
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- bottom input fields of request quote form -->
+                    <div class="bottom-fields-container">
+                        <div>
+                            <label for="">Charges Weight(KG)</label>
+                            <input type="text" name="chargesWeight">
+                        </div>
+                        <div>
+                            <label for="">No of Packages(KG)</label>
+                            <input type="text" name="noOfPackages">
+                        </div>
+                        <div>
+                            <label for="">Sign</label>
+                            <input type="text" name="signature">
+                        </div>
+                        <div>
+                            <label for="">Date</label>
+                            <input type="text" name="date">
+                        </div>
+                    </div>
+                    
+                    <!-- changed the attribute here cos i need this styled a little differently -->
+                    <div id="bottom-fields-container">
+                        <label for="">Export Officers Name & Signature:</label>
+                        <input type="text" name="exportOfficersName" id="">
+                    </div>
+                    <div id="btn-container">
+                        <button id="quote-submit-btn">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- footer section -->
+        <footer>
+            <div class="logo-container">
+                
+            </div>
+            <div id="footer-links-container">
+                <div id="footer-links">
+                    <div id="quick-links-container">
+                        <ul>
+                            <li class="quick-links">QUICKLINKS</li>
+                            <li class="quick-links"><a href="#">Homepage</a></li>
+                            <li class="quick-links"><a href="#">About Us</a></li>
+                            <li class="quick-links"><a href="#">FAQ</a></li>
+                        </ul>
+                    </div>
+                    <div id="contact-us-container">
+                        <ul>
+                            <li class="quick-links">CONTACT US</li>
+                            <li class="contact-us quick-links"><a href="#">+234(0) 000 00 000</a></li>
+                            <li class="contact-us quick-links"><a href="#">info@divineservices.ng</a></li>
+                            <li class="contact-us quick-links">
+                                <a href="#"><i class="fa-brands fa-instagram quick-links"></i></a>
+                                <a href="#"><i class="fa-brands fa-facebook-f quick-links"></i></a>
+                                <a href="#"><i class="fa-brands fa-twitter quick-links"></i></a>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                </div>
+                <hr>
+                
+                <div id="copyright">
+                    <p id="copyright-text">&copy 2023 M & C Divine Universal Services &#10072;&#10072; All Rights Reserverd </p>
+                </div>
+            </div>
+        </footer>
+    </main>
+</body>
+</html>
