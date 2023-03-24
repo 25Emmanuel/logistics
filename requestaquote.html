@@ -51,7 +51,7 @@
 
         <section id="request-a-quote">
             <div id="request-a-quote-container">
-                <form action="\">
+                <form action="\" id="form">
                     <div id="content-declaration-container">
                         <div id="request-a-quote-text-container">
                             <p id="request-a-quote-text">REQUEST A QUOTE</p>
@@ -65,7 +65,7 @@
                                 <div class="input-containers">
                                     <label for="senders-name">Full Name</label>
                                     <input type="text" class="request-quote-form" name="sendersFullname" id="senders-name" placeholder="sender's fullname">
-                                    <div class="error">
+                                    <div class="error-cont">
     
                                     </div>
                                 </div>
@@ -73,21 +73,20 @@
                                     <label for="senders-address">Address</label>
                                     <!-- <input type="text" name="" id="senders-address"> -->
                                     <textarea name="sendersAddress" id="senders-address" class="send-receive-address" cols="30" rows="10" placeholder="sender's address"></textarea>
-                                    <div class="error">
+                                    <div class="error-cont">
                                         
                                     </div>
                                 </div>
                                 <div class="input-containers">
                                     <label for="senders-number">Mobile-Number</label>
                                     <input type="text" name="sendersNumber" class="request-quote-form" id="senders-number" placeholder="sender's number">
-                                    <div class="error">
+                                    <div class="error-cont">
                                         
                                     </div>
                                 </div>
                                 <div class="input-containers">
                                     <label for="senders-email">Email</label>
                                     <input type="text" class="request-quote-form"  name="sendersEmail" id="senders-email" placeholder="sender's mail">
-                                    
                                 </div>
                                 
                             </div>
@@ -97,21 +96,21 @@
                                 <div class="input-containers">
                                     <label for="receivers-name">Full Name</label>
                                     <input type="text" class="request-quote-form" name="receiversFullname" id="receivers-name" placeholder="receiver's fullname">
-                                    <div class="error">
+                                    <div class="error-cont">
                                         
                                     </div>
                                 </div>
                                 <div class="input-containers address">
                                     <label for="receivers-address">Address</label>
                                     <textarea name="receiversAddress" id="receivers-address" class="send-receive-address" cols="30" rows="10" placeholder="receiver's address"></textarea>
-                                    <div class="error">
+                                    <div class="error-cont">
                                         
                                     </div>
                                 </div>
                                 <div class="input-containers">
                                     <label for="receivers-number">Mobile-Number</label>
                                     <input type="text" class="request-quote-form" name="receiversNumber" id="receivers-number" placeholder="receiver's mobile number">
-                                    <div class="error">
+                                    <div class="error-cont">
                                         
                                     </div>
                                 </div>
@@ -142,22 +141,29 @@
                         </tr>
                         <tr>
                             <td>
-                                <div>
-                                    <input type="text" name="productDescription" id="" class="commercial-invoice-form-fields">
-
-                                </div>
+                                
+                                    <input type="text" name="productDescription" id="product-description" class="commercial-invoice-form-fields">
+                                    <div class="error-cont">
+                                        <p></p>
+                                    </div>
+                                
                             </td>
                             <td>
-                                <div>
+                                
 
-                                    <input type="text" name="Quantity" id="" class="commercial-invoice-form-fields">
-                                </div>
+                                    <input type="text" name="Quantity" id="quantity" class="commercial-invoice-form-fields">
+                                    <div class="error-cont">
+                                        
+                                    </div>
+                                
                             </td>
                             <td>
-                                <div>
-                                    <input type="text" name="estimatedValue" id="" class="commercial-invoice-form-fields">
-
-                                </div>
+                                
+                                    <input type="text" name="estimatedValue" id="estimated-value" class="commercial-invoice-form-fields">
+                                    <div class="error-cont">
+                                        
+                                    </div>
+                                
                             </td>
                         </tr>
                     </table>
@@ -173,15 +179,21 @@
 
 
                             <li>
-                                <p>
-                                    I fully understand that any attempt to export illegal/prohibited items may result to legal<br>
-                                    consequences including apprehension and payment of fine etc.
-                                </p>
-                            </li>
-                            <div>
+                                <label for="terms">
+                                    <p>
+                                        I fully understand that any attempt to export illegal/prohibited items may result to legal<br>
+                                        consequences including apprehension and payment of fine etc.
+                                        
+            
+                                            <input type="checkbox" name="termsConfirmation" id="terms" value="I Understand" required>
+                                            <div class="error-cont">
+                                                    
+                                            </div>
+                                        
+                                    </p>
 
-                                <input type="checkbox" name="termsConfirmation" id="terms" value="I Understand">
-                            </div>
+                                </label>
+                            </li>
                         </ul>
                     </div>
 
@@ -292,5 +304,6 @@
             </div>
         </footer>
     </main>
+    <script src="requestaquote.js"></script>
 </body>
 </html>

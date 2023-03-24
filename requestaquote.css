@@ -185,6 +185,8 @@
 #sender-recipient-details label, #sender-recipient-details input {
     display: block;
     width: 100%;
+}
+.input-containers, label {
     margin-bottom: 10px;
 }
 .sender-receiver-infotext {
@@ -244,6 +246,7 @@
     width: 100%;
     padding: 10px;
     outline: none;
+    /* border: none; */
     font-family: 'poppins', 'serif';
     /* border: none; */
     font-size: 18px;
@@ -333,6 +336,23 @@
     display: flex;
     justify-content: flex-end;
     margin-right: 100px;
+}
+.success {
+    border-bottom: 1px solid greenyellow;
+}
+.successtwo {
+    border: 1px solid greenyellow;
+}
+.error {
+    border-bottom: 1px solid red;
+}
+.errortwo {
+    border: 1px solid red;
+}
+.error-cont p {
+    font-style: italic;
+    font-size: 10px;
+    color: red;
 }
 
 /* footer style is being fetched from the initial index css */
