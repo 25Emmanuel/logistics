@@ -492,6 +492,9 @@ footer .fa-brands {
     .link-holder {
         display: none;
     }
+    #our-beleive-btn {
+        width: 50%;
+    }
    
 }
 
