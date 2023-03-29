@@ -259,7 +259,6 @@ footer .fa-brands {
 
 @media (max-width: 768px ) {
     body {
-        /* background-color: blue; */
         min-width: 768px;
         margin-left: auto;
         padding: 0;
@@ -361,11 +360,11 @@ footer .fa-brands {
 
 @media (max-width: 560px) {
     body {
-        max-width: 560px;
+        width: 560px;
         padding: 0;
     }
     header {
-        max-width: 100%;
+        width: 100%;
     }
     #introduction-container {
         width: 80%;

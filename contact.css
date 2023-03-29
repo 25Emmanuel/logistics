@@ -128,3 +128,43 @@
 footer {
     margin-top: 73px;
 }
+
+@media (max-width: 768px) {
+    #body {
+        width: 768px;
+    }
+    #contact-image {
+        max-width: 80%;
+    }
+    #contact-form-container {
+        width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #keep-in-touch-container {
+        margin-left: 84px;
+    }
+    #map-location {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+}
+@media (max-width: 560px ) {
+    #body {
+        width: 560px;
+    }
+    #contact-image {
+        max-width: 80%;
+    }
+    #contact-text-container {
+        left: 109px;
+        margin-left: 19px;
+    }
+    #map-location {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
