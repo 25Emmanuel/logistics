@@ -131,7 +131,7 @@ footer {
 
 @media (max-width: 768px) {
     #body {
-        width: 768px;
+        width: 100%;
     }
     #contact-image {
         max-width: 80%;
@@ -153,7 +153,7 @@ footer {
 }
 @media (max-width: 560px ) {
     #body {
-        width: 560px;
+        width: 100%;
     }
     #contact-image {
         max-width: 80%;
