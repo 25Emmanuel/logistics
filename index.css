@@ -259,7 +259,7 @@ footer .fa-brands {
 
 @media (max-width: 768px ) {
     body {
-        min-width: 768px;
+        width: 768px;
         margin-left: auto;
         padding: 0;
     }
