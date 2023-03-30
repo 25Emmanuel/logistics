@@ -1,5 +1,5 @@
 #contact-image {
-    width: 1274px;
+    width: 100%;
     height: 265px;
     background: url('/images/contact1.jpg');
     background-repeat: no-repeat;
@@ -11,9 +11,11 @@
     margin-right: auto;
 }
 #contact-text-container {
-    position: absolute;
-    left: 292px;
-    top: 206px;
+    position: relative;
+    left: 290px;
+    top: 106px;
+    width: 20%;
+    margin-right: 0;
 }
 #contact-text {
     font-family: 'Newsreader', 'serif';
@@ -109,8 +111,7 @@
     color: #fff;
 }
 #map-location {
-    width: 1133px;
-    /* width: max-content; */
+    width: 70%;
     margin-top: 36px;
     margin-left: 224px;
     margin-right: auto;
@@ -118,17 +119,28 @@
     position: relative;
     padding-bottom: 30%;
 }
-#map-location iframe {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-}
 footer {
     margin-top: 73px;
 }
 
+@media (max-width: 990px) {
+    
+    #keep-in-touch-container, #contact-form-container, #map-location {
+        margin-left: 100px;
+    }
+    #contact-text-container {
+        width: fit-content;
+    }
+    #contact-form-container {
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #keep-in-touch-container {
+        margin-left: 201px;
+    }
+    
+}
 @media (max-width: 768px) {
     #body {
         width: 100%;
@@ -136,22 +148,38 @@ footer {
     #contact-image {
         max-width: 80%;
     }
+    #contact-text-container {
+        width: fit-content;
+        left: 190px;
+    }
     #contact-form-container {
-        width: 600px;
+        width: 50%;
         margin-left: auto;
         margin-right: auto;
     }
-    #keep-in-touch-container {
-        margin-left: 84px;
+    .full-name {
+        width: 40%;
     }
+    #keep-in-touch-container {
+        margin-left: 192px;
+        left: 190px;
+    }
+    #map-location {
+        width: 80%;
+        margin-right: 0;
+    }
+}
+@media (max-width: 560px) {
     #map-location {
         width: 80%;
         margin-left: auto;
         margin-right: auto;
     }
-    
+    #contact-text-container {
+        left: 100px
+    }
 }
-@media (max-width: 560px ) {
+@media (max-width: 375px ) {
     #body {
         width: 100%;
     }
@@ -160,7 +188,12 @@ footer {
     }
     #contact-text-container {
         left: 109px;
-        margin-left: 19px;
+    }
+    .full-name {
+        width: 40%;
+    }
+    #keep-in-touch-container {
+        margin-left: 120px;
     }
     #map-location {
         width: 80%;

@@ -4,12 +4,12 @@
     padding: 0;
     box-sizing: border-box;
 }
-#body {
-    min-width: 1440px;
+body {
+    width: 100%;
     font-family: 'poppins', 'sans-serif';
 }
 .header {
-    min-width: 1440px;
+    width: 100%;
 }
 #nav-bar {
     display: flex;
@@ -40,6 +40,9 @@
     
     /* align-self: center; */
 }
+#nav-links-container.link-container {
+    padding-left: 0px;
+}
 .to-toggle {
     display: flex;
     gap: 50px;
@@ -69,13 +72,7 @@
     /* the main blue #3176AF */
     height: 3px;
 }
-/* #chevron {
-    position: absolute;
-    padding-left: 4px;
-} */
-/* #sign-up {
-    font-weight: 700;
-} */
+
 #about-us {
     color: #3176AF;
 }
@@ -125,7 +122,7 @@
 
 /* who are we section */
 #who-are-we-contents {
-    width: 989px;
+    width: 80%;
     /* height: 774px; */
     margin-top: 20px;
     margin-left: auto;
@@ -135,7 +132,7 @@
 #who-are-we-main-content {
     display: flex;
     justify-content: space-between;
-
+    margin-top: 10px;
 }
 #who-are-we {
     font-family: 'poppins', 'sans-serif';
@@ -181,7 +178,7 @@
 #our-believe-container {
     margin-top: 60px;
 }
-#our-beleive-btn {
+#our-believe-btn {
     text-decoration: none;
     padding: 15px 41px;
     background-color: #3176AF;
@@ -204,7 +201,7 @@ footer {
     display: flex;
     justify-content: flex-start;
     margin-top: 79px;
-    height: 280px;
+    /* height: 280px; */
     background-color: #3176AF;
 }
 footer hr {
@@ -229,7 +226,7 @@ footer .fa-brands {
 }
 #footer-links-container {
     width: 667;
-    height: 202px;
+    /* height: 202px; */
     margin-left: 280px;
     background-color: #3176AF;
 }
@@ -256,7 +253,44 @@ footer .fa-brands {
 #quick-links-container .quick-links:first-child, #contact-us-container .quick-links:first-child {
     color: #fff;
 }
-
+@media (max-width: 1260px) {
+    footer #footer-links-container {
+        margin-left: 300px;
+    }
+    footer .logo-container {
+        margin-left: 100px;
+    }
+}
+@media (max-width: 990px) {
+    footer #footer-links-container {
+        margin-left: 200px;
+    }
+    footer .logo-container {
+        margin-left: 50px;
+    }
+    #nav-logo {
+        margin-left: 10px;
+    }
+    #nav-links-container {
+        margin-left: 100px;
+        padding-left: 70px;
+    }
+    #who-are-we-main-content {
+        flex-direction: column;
+        /* justify-content: flex-start; */
+        align-items: center;
+        width: 100%;
+    }
+    #who-are-we {
+        text-align: center;
+    }
+}
+@media (min-width: 770px) and (max-width: 840px) {
+    footer #footer-links-container {
+        margin-left: 100px;
+        
+    }
+}
 @media (max-width: 768px ) {
     body {
         width: 768px;
@@ -264,11 +298,11 @@ footer .fa-brands {
         padding: 0;
     }
     #body {
-        min-width: 100%;
+        width: 100%;
     }
     .header {
         /* height: 80px; */
-        min-width: 100%;
+        width: 100%;
         /* background-color: green; */
         margin: 0;
     }
@@ -317,6 +351,9 @@ footer .fa-brands {
     #who-are-we-image, #who-we-are-text {
         width: 100%;
     }
+    #who-are-we {
+        text-align: left;
+    }
     /* adjusting the logo in the footer at this breakpoint */
     #footer-logo {
         width: 80px;
@@ -356,6 +393,9 @@ footer .fa-brands {
         margin-left: auto;
         margin-right: auto;
     }
+    footer #footer-links-container {
+        margin-left: 0;
+    }
 }
 
 @media (max-width: 560px) {
@@ -363,11 +403,15 @@ footer .fa-brands {
         width: 100%;
         padding: 0;
     }
+    
+    .introduction {
+        width: 100%;
+    }
     header {
         width: 100%;
     }
     #introduction-container {
-        width: 80%;
+        width: 100%;
     }
     #nav-links-container ul {
         gap: 0;
@@ -404,8 +448,6 @@ footer .fa-brands {
     }
     .to-toggle {
         flex-direction: column;
-        /* align-items: flex-start; */
-        /* display: none; */
     }
     #nav-links-container {
         width: 100%;
@@ -415,7 +457,7 @@ footer .fa-brands {
     }
     #hamburger-menu-container {
         position: absolute;
-        left: 700px;
+        left: 400px;
         top: 0px;
         margin-left: auto;
     }
@@ -429,7 +471,7 @@ footer .fa-brands {
 }
 @media (max-width: 375px) {
     body {
-        width: 100px;
+        width: 100%;
         padding: 0;
     }
     #introduction-container {
@@ -466,22 +508,20 @@ footer .fa-brands {
     #hamburger-menu-container {
         display: block;
         font-size: 2rem;
-        /* margin-left: 100px; */
     }
     .to-toggle {
         flex-direction: column;
-        /* align-items: flex-start; */
-        /* display: none; */
     }
     #nav-links-container {
         width: 100%;
     }
+    
     .nav-links a{
         text-align: center;
     }
     #hamburger-menu-container {
         position: absolute;
-        left: 700px;
+        left: 240px;
         top: 0px;
         margin-left: auto;
     }
@@ -491,8 +531,25 @@ footer .fa-brands {
     .link-holder {
         display: none;
     }
-    #our-beleive-btn {
-        width: 50%;
+    #our-believe-btn {
+        width: auto;
+    }
+    footer {
+        margin-top: 0px;
+        
+    }
+    #footer-links {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 0;
+    }
+    #quick-links-container {
+        justify-content: center;
+    }
+    #introductory-text-container {
+        left: 50px;
     }
    
 }
