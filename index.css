@@ -552,4 +552,18 @@ footer .fa-brands {
     }
    
 }
+@media (max-width: 412px) {
+    #hamburger-menu-container {
+        position: absolute;
+        left: 320px;
+    }
+    footer .logo-container {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #copyright-text {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
 
