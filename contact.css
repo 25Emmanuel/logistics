@@ -162,7 +162,6 @@ footer {
     }
     #keep-in-touch-container {
         margin-left: 192px;
-        left: 190px;
     }
     #map-location {
         width: 80%;
@@ -176,7 +175,10 @@ footer {
         margin-right: auto;
     }
     #contact-text-container {
-        left: 100px
+        left: 75px
+    }
+    #keep-in-touch-container {
+        margin-left: 103px;
     }
 }
 @media (max-width: 375px ) {

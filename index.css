@@ -293,7 +293,6 @@ footer .fa-brands {
 }
 @media (max-width: 768px ) {
     body {
-        width: 768px;
         margin-left: auto;
         padding: 0;
     }
@@ -301,25 +300,22 @@ footer .fa-brands {
         width: 100%;
     }
     .header {
-        /* height: 80px; */
         width: 100%;
-        /* background-color: green; */
         margin: 0;
     }
     #nav-links-container {
-        margin-left: 120px;
+        margin-left: 60px;
     }
     #nav-logo {
         width: 80px;
         height: 60px;
-        margin-left: 50px;
+        margin-left: 30px;
     }
     /* adjusting introductory container relative to the whole screen */
     #introduction-container {
         max-width: 80%;
         margin-left: auto;
         margin-right: auto;
-        /* margin-top: 0; */
     }
     #who-are-we-contents, #us {
         width: 100%;
@@ -346,6 +342,7 @@ footer .fa-brands {
     #who-are-we-main-content {
         flex-direction: column;
         /* justify-content: flex-start; */
+        height: 1050px;
     }
     /* updating the size of these containers respectively to full size */
     #who-are-we-image, #who-we-are-text {
@@ -436,6 +433,7 @@ footer .fa-brands {
     #nav-logo {
         height: 50px;
         width: 50px;
+        margin-left: 20px;
     }
     #who-are-we-contents {
         width: 80%;
@@ -444,7 +442,6 @@ footer .fa-brands {
     #hamburger-menu-container {
         display: block;
         font-size: 2rem;
-        /* margin-left: 100px; */
     }
     .to-toggle {
         flex-direction: column;
@@ -457,9 +454,8 @@ footer .fa-brands {
     }
     #hamburger-menu-container {
         position: absolute;
-        left: 400px;
+        left: 440px;
         top: 0px;
-        margin-left: auto;
     }
     #hamburger-menu-container:hover {
         cursor: pointer;
@@ -521,9 +517,12 @@ footer .fa-brands {
     }
     #hamburger-menu-container {
         position: absolute;
-        left: 240px;
+        left: 290px;
         top: 0px;
         margin-left: auto;
+    }
+    #who-are-we-main-content {
+        height: 1150px;
     }
     #hamburger-menu-container:hover {
         cursor: pointer;
@@ -535,7 +534,7 @@ footer .fa-brands {
         width: auto;
     }
     footer {
-        margin-top: 0px;
+        margin-top: 20px;
         
     }
     #footer-links {
