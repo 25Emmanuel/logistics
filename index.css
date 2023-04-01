@@ -467,10 +467,10 @@ footer .fa-brands {
         left: 400px
     }
 }
-@media (max-width: 412px) {
+@media (max-width: 414px) {
     #hamburger-menu-container {
         position: absolute;
-        left: 280px;
+        left: 360px;
     }
     footer .logo-container {
         margin-left: auto;
@@ -526,10 +526,6 @@ footer .fa-brands {
         width: 80%;
     }
     /* to be toggled by js */
-    #hamburger-menu-container {
-        /* display: block;
-        font-size: 2rem; */
-    }
     .to-toggle {
         flex-direction: column;
     }
@@ -577,9 +573,23 @@ footer .fa-brands {
     }
    
 }
-@media (max-width: 300px) {
+@media  (max-width: 320px) {
     #hamburger-menu-container {
-        left: 210px
+        left: 200px
+    }
+}
+@media (max-width: 300px) {
+    
+    #introductory-text-container {
+        left: 30px;
+        margin-right: 0;
+    }
+    table {
+        /* display: flex; */
+        /* flex-direction: column; */
+    }
+    .commercial-invoice-form-fields {
+        width: 100%;
     }
 }
 
