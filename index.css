@@ -483,6 +483,14 @@ footer .fa-brands {
         margin-left: auto;
         margin-right: auto;
     }
+    #senders-info, #receivers-info {
+        width: 70%;
+    }
+    #declaration-container p {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
 }
 
 @media (max-width: 375px) {
@@ -537,7 +545,7 @@ footer .fa-brands {
     }
     #hamburger-menu-container {
         position: absolute;
-        left: 290px;
+        left: 270px;
         top: 0px;
         margin-left: auto;
     }
