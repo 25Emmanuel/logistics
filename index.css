@@ -474,8 +474,8 @@ footer .fa-brands {
     }
     #footer-logo {
         justify-self: center;
-        margin-left: auto;
-        margin-right: auto;
+        /* margin-left: auto;
+        margin-right: auto; */
     }
     #copyright-text {
         margin-left: auto;
