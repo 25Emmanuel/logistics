@@ -108,19 +108,39 @@
 }
 #declaration-container {
     margin-top: 30px;
-    padding: 0 125px;
+    /* padding: 0 125px; */
 }
-#declaration-container span {
+#declaration-container span, .terms span, .note span {
     color: red;
     font-size: 20px;
 }
-#commercial-invoice-text-container, #term-condition-container {
+.terms {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.terms p {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.note p {
+    margin-left: auto;
+    margin-right: auto;
+}
+#commercial-invoice-text-container {
     margin-top: 30px;
     /* padding: 0 125px; */
     width: 80%;
     margin-left: auto;
     margin-right: auto;
 
+}
+#term-condition-container {
+    margin-top: 30px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
 }
 #commercial-invoice-text-container h4 {
     text-decoration: underline;
@@ -253,19 +273,20 @@
 
 /* footer style is being fetched from the initial index css */
 @media (max-width: 990px) {
-    #note-section ul {
-        width: 80%;
+    #declaration-container {
+        width: 50%;
+        text-align: center;
         margin-left: auto;
         margin-right: auto;
     }
     #term-condition-container {
         margin-left: 0px;
     }
-    #term-condition-container ul {
+    /* #term-condition-container ul {
         width: 80%;
         margin-left: auto;
-        /* margin-right: auto; */
-    }
+        margin-right: auto;
+    } */
     #request-a-quote-container {
         /* list-style: none; */
         width: 100%;
@@ -288,6 +309,15 @@
         margin-right: 0;
     }
 }
+@media (max-width: 568px) {
+    #sender-recipient-details {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
+    
+}
 @media (max-width: 412px) {
     #sender-recipient-details {
         flex-direction: column;
@@ -297,5 +327,11 @@
     }
     #btn-container {
         justify-content: center;
+    }
+}
+@media (max-width: 375px) {
+    #request-a-quote-text-container {
+        margin-left: 100px;
+        width: 70%;
     }
 }

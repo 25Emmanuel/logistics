@@ -304,12 +304,12 @@ footer .fa-brands {
         margin: 0;
     }
     #nav-links-container {
-        margin-left: 60px;
+        margin-left: 50px;
     }
     #nav-logo {
         width: 80px;
         height: 60px;
-        margin-left: 30px;
+        margin-left: 20px;
     }
     /* adjusting introductory container relative to the whole screen */
     #introduction-container {
@@ -465,6 +465,26 @@ footer .fa-brands {
     }
    
 }
+@media (max-width: 568px) {
+    #hamburger-menu-container {
+        left: 400px
+    }
+}
+@media (max-width: 412px) {
+    #hamburger-menu-container {
+        position: absolute;
+        left: 320px;
+    }
+    footer .logo-container {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #copyright-text {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
 @media (max-width: 375px) {
     body {
         width: 100%;
@@ -552,18 +572,5 @@ footer .fa-brands {
     }
    
 }
-@media (max-width: 412px) {
-    #hamburger-menu-container {
-        position: absolute;
-        left: 320px;
-    }
-    footer .logo-container {
-        margin-left: auto;
-        margin-right: auto;
-    }
-    #copyright-text {
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
+
 
