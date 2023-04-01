@@ -15,32 +15,28 @@
     <main id="body">
         <header class="header">
             <nav id="nav-bar">
-                <!-- what we hve as logo right now is me improvising by using the class "logo-container" below as logo for both the nav and footer -->
-                <!-- if i need to use the main image here in html i just need to change the logo-container class to an id, uncomment the img in div below,then comment the .logo-container class style in css -->
+                
                 <div class="logo-container" id="nav-logo">
-                    <!-- <img src="/images/logo-image.JPG" id="logo"></img:src> -->
+                    
                 </div>
-                <div id="nav-links-container">
-                    <ul>
-                        <li class="nav-links"><a href="#">HOME</a></li>
-                        <li class="about-us nav-links"><a href="#">ABOUT US</a></li>
-                        <li class="nav-links"><a href="#">SERVICES <i class="fa-solid fa-sort-down" id="chevron"></i></a>
-                            <div id="services-sub-menu">
-                                <ul>
-                                    <li class="sub-nav"><a href="#">Deliver Your Parcels</a></li>
-                                    <li class="sub-nav"><a href="#">Receive Your Parcels</a></li>
-                                </ul>
-                            </div>
+
+                
+
+                <div id="nav-links-container" class="link-holder link-container">
+                    <ul class="to-toggle">
+                        <li class="nav-links"><a href="index.html">HOME</a></li>
+                        <li class="about-us nav-links"><a href="pickup.html">PICK UP</a></li>
+                        <li class="nav-links"><a href="requestaquote.html">SERVICES</a>
                         </li>
-                        
-                        <li class="nav-links" id="sign-up"><a href="#">SIGN UP HERE</a></li>
+                        <li class="nav-links"><a href="contact.html" id="get-in-touch">GET IN TOUCH</a></li>
                     </ul>
                     
-                    <a href="#" id="get-in-touch">GET IN TOUCH</a>
                 </div>
+                
                 <div id="hamburger-menu-container">
                     <p id="hamburger-menu">&#9776;</p>
                 </div>
+                
             </nav>
             <hr id="nav-bottom-lining">
         </header>

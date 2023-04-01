@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 .display-container {
-    width: 1236px;
+    width: 80%;
     height: 552px;
     margin-right: auto;
     margin-left: auto;
@@ -41,7 +41,8 @@ th, td {
     margin-top: 4.5px;
     padding: 15px 27px;
     font-size: 2rem;
-    color: #4264FB;
+    color: #000;
+    font-weight: 700;
     background-color: greenyellow;
     opacity: 0.6;
     border-radius: 25px;
@@ -96,4 +97,27 @@ th, td {
 #distance-summary, #cost-summary {
     display: flex;
     justify-content: space-between;
+}
+@media (max-width: 650px) {
+    #summary-container {
+        width: 40%;
+    }
+    #distance-summary, #cost-summary {
+        text-align: center;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #direction-for-use {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #pickup-table {
+        width: 90%;
+    }
+    #direct {
+        font-size: 1rem;
+        padding: 10px 15px;
+    }
 }
