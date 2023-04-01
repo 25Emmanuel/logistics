@@ -473,7 +473,7 @@ footer .fa-brands {
 @media (max-width: 412px) {
     #hamburger-menu-container {
         position: absolute;
-        left: 320px;
+        left: 300px;
     }
     footer .logo-container {
         margin-left: auto;
