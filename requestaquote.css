@@ -39,7 +39,7 @@
 #request-a-quote-text-container {
     width: auto;
     margin-left: 138px;
-    height: 55px;
+    /* height: 55px; */
 }
 #request-a-quote-text-container:after {
     content: '';
@@ -331,7 +331,8 @@
 }
 @media (max-width: 375px) {
     #request-a-quote-text-container {
-        margin-left: 100px;
+        margin-left: 50px;
         width: 70%;
+        
     }
 }
