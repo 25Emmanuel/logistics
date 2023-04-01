@@ -473,8 +473,9 @@ footer .fa-brands {
         left: 360px;
     }
     footer .logo-container {
+        justify-self: center;
         margin-left: auto;
-        /* margin-right: auto; */
+        margin-right: auto;
     }
     #copyright-text {
         margin-left: auto;
