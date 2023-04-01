@@ -472,7 +472,7 @@ footer .fa-brands {
         position: absolute;
         left: 360px;
     }
-    footer .logo-container {
+    #footer-logo {
         justify-self: center;
         margin-left: auto;
         margin-right: auto;
