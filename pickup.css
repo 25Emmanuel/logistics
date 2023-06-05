@@ -98,6 +98,10 @@ th, td {
     display: flex;
     justify-content: space-between;
 }
+#error-text {
+    text-align: center;
+    color: red;
+}
 @media (max-width: 650px) {
     #summary-container {
         width: 40%;

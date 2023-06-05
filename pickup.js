@@ -20,54 +20,62 @@ async function getRoute(begin) {
   // make a directions request using driving profile
   // a start position will always change
   // only the end or destination will remain the same
-  const query = await fetch(
-    `https://api.mapbox.com/directions/v5/mapbox/driving-traffic/${begin[0]},${begin[1]};${end[0]},${end[1]}?steps=true&geometries=geojson&access_token=${mapboxgl.accessToken}`,
-    { method: 'GET' }
-  );
-  const json = await query.json();
-  console.log(begin);
-  const data = json.routes[0];
-  route = data.geometry.coordinates;
-  distanceOfTravel = data.distance;
-  console.log(distanceOfTravel);
-  const geojson = {
-    type: 'Feature',
-    properties: {},
-    geometry: {
-      type: 'LineString',
-      coordinates: route
-    }
-  };
+  try {
+    const query = await fetch(
+      `https://api.mapboxs.com/directions/v5/mapbox/driving-traffic/${begin[0]},${begin[1]};${end[0]},${end[1]}?steps=true&geometries=geojson&access_token=${mapboxgl.accessToken}`,
+      { method: 'GET' }
+    );
+    if (query.ok) {
+      const json = await query.json();
+      console.log(`this is begin ${begin}`);
+      const data = json.routes[0];
+      route = data.geometry.coordinates;
+      distanceOfTravel = data.distance;
+      console.log(distanceOfTravel);
+      const geojson = {
+        type: 'Feature',
+        properties: {},
+        geometry: {
+          type: 'LineString',
+          coordinates: route
+        }
+      };
     
-  // if the route already exists on the map, we'll reset it using setData
-  if (map.getSource('route')) {
-    console.log('means its true');
-    console.log(geojson);
-    map.getSource('route').setData(geojson);
-      
-  }
-  // otherwise, we'll make a new request
-  else {
-    map.addLayer({
-      id: 'route',
-      type: 'line',
-      source: {
-        type: 'geojson',
-        data: geojson
-      },
-      layout: {
-        'line-join': 'round',
-        'line-cap': 'round'
-      },
-      paint: {
-        'line-color': '#3887be',
-        'line-width': 5,
-        'line-opacity': 0.75
+      // if the route already exists on the map, we'll reset it using setData
+      if (map.getSource('route')) {
+        console.log('means its true');
+        console.log(geojson);
+        map.getSource('route').setData(geojson);
+          
       }
-    });
+      // otherwise, we'll make a new request
+      else {
+        map.addLayer({
+          id: 'route',
+          type: 'line',
+          source: {
+            type: 'geojson',
+            data: geojson
+          },
+          layout: {
+            'line-join': 'round',
+            'line-cap': 'round'
+          },
+          paint: {
+            'line-color': '#3887be',
+            'line-width': 5,
+            'line-opacity': 0.75
+          }
+        });
+      }
+      // add turn instructions here at the end
+      pickUpOrder();
+    } 
+  } catch (error) {
+    handleError ()
   }
-  // add turn instructions here at the end
-  pickUpOrder();
+  
+  
 }
 
 map.on('load', () => {
@@ -110,7 +118,7 @@ function userLocation () {
         start[1] = position.coords.latitude
       }
 
-      console.log(start);
+      // console.log(start);
 
       // adding a new marker at user approx location
       // i want it that when there is already a marker on the map for the users loc, another shouldnt get added when d user clicks the geolocate button again mistakenly
@@ -162,4 +170,12 @@ function pickUpOrder () {
   totalDistanceValue.innerHTML = `<h2>${(+distanceOfTravel/1000).toFixed(2)} KM</h2>`;
   totalCostText.innerHTML = `<span>Total Cost:</span>`;
   totalCostValue.innerHTML = `<h2>${Math.ceil(((+distanceOfTravel/1000).toFixed(2)) * 250)} Naira</h2>`;
+}
+
+// handling error when fetching route fails
+function handleError () {
+  document.querySelector('#cost-summary').style.display = 'none'
+  document.querySelector('#distance-summary').style.display = 'none'
+  document.querySelector('#error-text').innerText = 'Oops! Couldn\'t fetch route details at the moment. please try again..'
+  console.log('there was an error');
 }
