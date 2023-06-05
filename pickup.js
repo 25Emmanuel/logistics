@@ -155,7 +155,7 @@ function userLocation () {
 // obtaining route details, as well as cost via funcs respectively
 document.querySelector('#direct').addEventListener('click', () => {
   getRoute(start);
-  pickUpOrder();
+  // pickUpOrder();
 });
 
 document.querySelector('.locate').addEventListener('click', userLocation);
