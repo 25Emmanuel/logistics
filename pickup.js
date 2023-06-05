@@ -166,10 +166,14 @@ function pickUpOrder () {
   const totalDistanceValue = document.querySelector('#total-distance-value');
   const totalCostText = document.querySelector('#total-cost-text');
   const totalCostValue = document.querySelector('#total-cost-value');
-  totalDistanceText.innerHTML = `<span>Total Distance:</span>`;
-  totalDistanceValue.innerHTML = `<h2>${(+distanceOfTravel/1000).toFixed(2)} KM</h2>`;
-  totalCostText.innerHTML = `<span>Total Cost:</span>`;
-  totalCostValue.innerHTML = `<h2>${Math.ceil(((+distanceOfTravel/1000).toFixed(2)) * 250)} Naira</h2>`;
+  console.log("in pickup order function "+distanceOfTravel);
+  if (distanceOfTravel) {
+
+    totalDistanceText.innerHTML = `<span>Total Distance:</span>`;
+    totalDistanceValue.innerHTML = `<h2>${(+distanceOfTravel/1000).toFixed(2)} KM</h2>`;
+    totalCostText.innerHTML = `<span>Total Cost:</span>`;
+    totalCostValue.innerHTML = `<h2>${Math.ceil(((+distanceOfTravel/1000).toFixed(2)) * 250)} Naira</h2>`;
+  }
 }
 
 // handling error when fetching route fails
