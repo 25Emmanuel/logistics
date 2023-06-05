@@ -22,7 +22,7 @@ async function getRoute(begin) {
   // only the end or destination will remain the same
   try {
     const query = await fetch(
-      `https://api.mapbox.com/directions/v5/mapbox/driving-traffic/${begin[0]},${begin[1]};${end[0]},${end[1]}?steps=true&geometries=geojson&access_token=${mapboxgl.accessToken}`,
+      `https://api.mapboxs.com/directions/v5/mapbox/driving-traffic/${begin[0]},${begin[1]};${end[0]},${end[1]}?steps=true&geometries=geojson&access_token=${mapboxgl.accessToken}`,
       { method: 'GET' }
     );
     if (query.ok) {
@@ -71,7 +71,7 @@ async function getRoute(begin) {
       // add turn instructions here at the end
       pickUpOrder();
     } else {
-      document.querySelector('#error-text').innerText = 'Oops! Couldn\'t get your location, regeolocate and try again..'
+      document.querySelector('#error-text').innerText = 'Oops! Couldn\'t get your location, please check your location settings, regeolocate and try again..'
     }
   } catch (error) {
     handleError ()
@@ -157,7 +157,6 @@ function userLocation () {
 // obtaining route details, as well as cost via funcs respectively
 document.querySelector('#direct').addEventListener('click', () => {
   getRoute(start);
-  // pickUpOrder();
 });
 
 document.querySelector('.locate').addEventListener('click', userLocation);
@@ -170,7 +169,6 @@ function pickUpOrder () {
   const totalCostValue = document.querySelector('#total-cost-value');
   console.log("in pickup order function "+distanceOfTravel);
   if (distanceOfTravel) {
-
     totalDistanceText.innerHTML = `<span>Total Distance:</span>`;
     totalDistanceValue.innerHTML = `<h2>${(+distanceOfTravel/1000).toFixed(2)} KM</h2>`;
     totalCostText.innerHTML = `<span>Total Cost:</span>`;
