@@ -69,6 +69,7 @@ async function getRoute(begin) {
         });
       }
       // add turn instructions here at the end
+      document.querySelector('#error-text').innerText = '';
       pickUpOrder();
     } else {
       document.querySelector('#error-text').innerText = 'Oops! Couldn\'t get your location, please check your location settings, regeolocate and try again..'
