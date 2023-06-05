@@ -173,7 +173,7 @@ function pickUpOrder () {
     totalDistanceValue.innerHTML = `<h2>${(+distanceOfTravel/1000).toFixed(2)} KM</h2>`;
     totalCostText.innerHTML = `<span>Total Cost:</span>`;
     totalCostValue.innerHTML = `<h2>${Math.ceil(((+distanceOfTravel/1000).toFixed(2)) * 250)} Naira</h2>`;
-  } else if (distanceOfTravel === NaN) {
+  } else {
     document.querySelector('#error-text').innerText = 'Oops! Couldn\'t get your location, regeolocate and try again..'
   }
 }
