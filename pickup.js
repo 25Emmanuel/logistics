@@ -174,8 +174,10 @@ function pickUpOrder () {
 
 // handling error when fetching route fails
 function handleError () {
-  document.querySelector('#cost-summary').style.display = 'none'
-  document.querySelector('#distance-summary').style.display = 'none'
-  document.querySelector('#error-text').innerText = 'Oops! Couldn\'t fetch route details at the moment. please try again..'
-  console.log('there was an error');
+  if (!distanceOfTravel) {
+    document.querySelector('#cost-summary').style.display = 'none'
+    document.querySelector('#distance-summary').style.display = 'none'
+    document.querySelector('#error-text').innerText = 'Oops! Couldn\'t fetch route details at the moment. please try again..'
+    console.log('there was an error');
+  }
 }
