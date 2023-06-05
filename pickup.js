@@ -173,15 +173,15 @@ function pickUpOrder () {
     totalDistanceValue.innerHTML = `<h2>${(+distanceOfTravel/1000).toFixed(2)} KM</h2>`;
     totalCostText.innerHTML = `<span>Total Cost:</span>`;
     totalCostValue.innerHTML = `<h2>${Math.ceil(((+distanceOfTravel/1000).toFixed(2)) * 250)} Naira</h2>`;
+  } else if (distanceOfTravel === NaN) {
+    document.querySelector('#error-text').innerText = 'Oops! Couldn\'t get your location, regeolocate and try again..'
   }
 }
 
 // handling error when fetching route fails
 function handleError () {
-  if (!distanceOfTravel) {
     document.querySelector('#cost-summary').style.display = 'none'
     document.querySelector('#distance-summary').style.display = 'none'
     document.querySelector('#error-text').innerText = 'Oops! Couldn\'t fetch route details at the moment. please try again..'
     console.log('there was an error');
-  }
 }
