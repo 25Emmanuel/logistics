@@ -22,7 +22,7 @@ async function getRoute(begin) {
   // only the end or destination will remain the same
   try {
     const query = await fetch(
-      `https://api.mapbox.com/directions/v5/mapbox/driving-traffic/${begin[0]},${begin[1]};${end[0]},${end[1]}?steps=true&geometries=geojson&access_token=${mapboxgl.accessToken}`,
+      `https://api.mapboxs.com/directions/v5/mapbox/driving-traffic/${begin[0]},${begin[1]};${end[0]},${end[1]}?steps=true&geometries=geojson&access_token=${mapboxgl.accessToken}`,
       { method: 'GET' }
     );
     if (query.ok) {
